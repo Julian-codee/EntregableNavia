@@ -341,3 +341,84 @@ let libros = [
     },
 
 ]
+
+const libroEjemplo = {
+    titulo: "Fahrenheit 451",
+    autor: "Ray Bradbury",
+    genero: "Ciencia ficción",
+    idioma: "Inglés",
+    precio: 18.00,
+    formato: "Tapa blanda",
+    isbn: "978-0-7432-7356-5",
+    descripcion: "Una distopía sobre una sociedad donde los libros están prohibidos.",
+    estado: "Nuevo",
+    ubicacion: "Los Ángeles",
+    fecha_publicacion: "1953-10-19",
+    editorial: "Ballantine Books",
+    paginas: 256,
+    dimensiones: "13x1.5x20 cm",
+    peso: "0.3 kg"
+  };
+  
+  function mostrarMenu() {
+  console.log("Seleccione una opción:");
+  console.log("1. Mostrar pila de libros");
+  console.log("2. Añadir un libro a la pila");
+  console.log("3. Quitar el último libro de la pila");
+  console.log("4. Mostrar la longitud de la pila");
+  console.log("5. Salir");
+  }
+  
+  function mostrarLibros(libros) {
+  console.log("Pila actual de libros:", libros);
+  }
+  
+  function añadirLibro(libros, libro) {
+  libros.push(libro);
+  console.log(`Libro añadido: ${libro.titulo}`);
+  }
+  
+  function quitarLibro(libros) {
+  const libroQuitado = libros.pop();
+  if (libroQuitado) {
+    console.log(`Libro quitado: ${libroQuitado.titulo}`);
+  } else {
+    console.log("No hay libros para quitar.");
+  }
+  }
+  
+  function mostrarLongitud(libros) {
+  console.log(`Longitud del array: ${libros.length}`);
+  }
+  
+  var continuar = "si";
+  
+  do {
+  mostrarMenu();
+  var opcion = prompt("Seleccione una opción:");
+  switch (opcion) {
+    case '1':
+      mostrarLibros(libros);
+      break;
+    case '2':
+      // Aquí deberías obtener detalles del libro a añadir, en este caso usamos el libroEjemplo
+      añadirLibro(libros, libroEjemplo);
+      break;
+    case '3':
+      quitarLibro(libros);
+      break;
+    case '4':
+      mostrarLongitud(libros);
+      break;
+    case '5':
+      continuar = "no";
+      console.log("Saliendo del programa...");
+      break;
+    default:
+      console.log("Opción no válida. Intente de nuevo.");
+      break;
+  }
+  if (continuar !== "no") {
+    continuar = prompt("Desea continuar (si/no)").toLowerCase();
+  }
+  } while (continuar === "si");
