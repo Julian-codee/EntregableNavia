@@ -342,22 +342,22 @@ let libros = [
 
 ]
 
-const libroEjemplo = {
-    titulo: "Fahrenheit 451",
-    autor: "Ray Bradbury",
-    genero: "Ciencia ficción",
-    idioma: "Inglés",
-    precio: 18.00,
+const libroNuevo = {
+    titulo: "LA GRANJA DEL BORREGO",
+    autor: "CARLOS ALBERTO DIAZ",
+    genero: "Literatura juvenil",
+    idioma: "Español",
+    precio: 52000,
     formato: "Tapa blanda",
-    isbn: "978-0-7432-7356-5",
-    descripcion: "Una distopía sobre una sociedad donde los libros están prohibidos.",
+    isbn: "9786287675100",
+    descripcion: '¡Bienvenid@s a la Granja del Borrego! En este libro conocerán la historia del granjero más divertido de todos: ¿sí saben quién es? ¡Nada más y nada menos que el hijo favorito de "La mamá de las recetas"! Además, descubrirán todas las herramientas que necesitan para vivir en una granja y los secretos más asombrosos de la naturaleza. Y no solo eso, también se convertirán en l@s mejores amig@s de las gallinas empoderadas, de la vaca Rosalía y del cerdo Lolo. ¿Están list@s para empezar a sembrar sus propios alimentos en casa? ¿A hacer su propio compost, a identificar las expresiones de los caballos (eso es importante, granjer@s), a reconocer si un huevo está viejo o fresco y a ser más amigables con el entorno que los rodea? No esperen más, ¡alisten sus botas, sus sombreros y únanse al movimiento granjero!',
     estado: "Nuevo",
-    ubicacion: "Los Ángeles",
-    fecha_publicacion: "1953-10-19",
-    editorial: "Ballantine Books",
-    paginas: 256,
-    dimensiones: "13x1.5x20 cm",
-    peso: "0.3 kg"
+    ubicacion: "Cali",
+    fecha_publicacion: "29/04/2024",
+    editorial: "ALTEA",
+    paginas: 188,
+    dimensiones: "Ancho: 15cm - Alto: 23cm",
+    peso: "50grs"
   };
   
   function mostrarMenu() {
@@ -401,8 +401,7 @@ const libroEjemplo = {
       mostrarLibros(libros);
       break;
     case '2':
-      // Aquí deberías obtener detalles del libro a añadir, en este caso usamos el libroEjemplo
-      añadirLibro(libros, libroEjemplo);
+      añadirLibro(libros, libroNuevo);
       break;
     case '3':
       quitarLibro(libros);
