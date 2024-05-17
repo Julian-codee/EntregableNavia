@@ -342,6 +342,8 @@ let libros = [
 
 ]
 
+
+//Constante para el nuevo libro el cual sera agregado
 const libroNuevo = {
     titulo: "LA GRANJA DEL BORREGO",
     autor: "CARLOS ALBERTO DIAZ",
@@ -360,6 +362,8 @@ const libroNuevo = {
     peso: "50grs"
   };
   
+//Funcion para mostrar el menu de eleccion
+
   function mostrarMenu() {
   console.log("Seleccione una opción:");
   console.log("1. Mostrar pila de libros");
@@ -369,8 +373,9 @@ const libroNuevo = {
   console.log("5. Salir");
   }
   
+  //Funciones , Mostrar , añadir , quitar
   function mostrarLibros(libros) {
-  console.log("Pila actual de libros:", libros);
+  console.table(libros);
   }
   
   function añadirLibro(libros, libro) {
@@ -390,8 +395,10 @@ const libroNuevo = {
   function mostrarLongitud(libros) {
   console.log(`Longitud del array: ${libros.length}`);
   }
+
+  //Switch case de eleccion para menu 
   
-  var continuar = "si";
+  let continuar = "si";
   
   do {
   mostrarMenu();
