@@ -370,7 +370,7 @@ function showMainMenu() {
   let message = "Elige un Menu:\n";
   message += "1. Menu Libros\n";
   message += "2. Menu iteraciones\n";
-  message += "3. Menu nuevo\n";
+  message += "3. Menu spreed \n";
   message += "4. Salir";
 
   // Mensaje y Opcion del Usuario
@@ -387,8 +387,7 @@ function showMainMenu() {
       showSubMenu2();
       break;
     case '3':
-      alert("Elegiste la Opción 3");
-      showMainMenu(); // Volver al menú principal
+      showSubMenu3(); // Volver al menú principal
       break;
     case '4':
       alert("Saliendo del menú...");
@@ -576,13 +575,12 @@ function showSubMenu2() {
     }
   });
 
-
   // Mostrar el mensaje y capturar la elección del usuario
-  let subChoice = prompt(subMessage);
+  let subChoice2 = prompt(subMessage);
 
   // Evaluar la elección del usuario en el submenú
 
-  switch (subChoice) {
+  switch (subChoice2) {
     case '1':
       console.table(LibroMethod);
       showSubMenu2();
@@ -608,6 +606,66 @@ function showSubMenu2() {
   }
 }
 
+
+//SUBMENU 3
+
+function showSubMenu3() {
+  // Definir el mensaje con las opciones del submenú
+
+  let subMessage = "Elige una  opcion :\n";
+  subMessage += "1. Agregar descuento a todos los libros\n";
+  subMessage += "2. Lista de libros\n";
+  subMessage += "3. Regresar al menú principal";
+
+  
+  //METHODS + SPREED OPERATOR
+
+  const descuento = libros.map((libros) => {
+    return{
+      ...libros,
+      descuento:20
+    }
+  });
+  const descuento1 = libros.map((libros) => {
+    return{
+      ...libros,
+      descuento:20
+    }
+  })
+  .map((libros) =>{
+    return{
+      titulo:libros.titulo,
+      Autor:libros.autor,
+      Editorial:libros.editorial,
+      Precio:libros.precio,
+      Descuento:libros.descuento
+    }
+  });
+
+
+
+  // Mostrar el mensaje y capturar la elección del usuario
+  let subChoice3 = prompt(subMessage);
+
+  // Evaluar la elección del usuario en el submenú
+
+  switch (subChoice3) {
+    case '1':
+      console.table(descuento);
+      showSubMenu3();
+      break;
+    case '2':
+      console.table(descuento1);
+        showSubMenu3();
+      break;
+    case '3':
+      showMainMenu(); 
+      break;
+    default:
+      alert("Opción no válida");
+      showSubMenu();
+  }
+}
 
 
 
