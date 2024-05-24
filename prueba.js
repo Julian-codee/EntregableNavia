@@ -774,13 +774,122 @@ function showSubMenu6() {
   // Definir el mensaje con las opciones del submenú
 
   let subMessage = "Elige una  opcion :\n";
-  subMessage += "1. Resumen de libros Mayor numero de paginas\n";
+  subMessage += "1. Libros Caros 1\n";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   subMessage += "2. Regresar al menú principal";
 
 
   //METHODS ENCADENADOS
 
  
+  const LibroCaro1 = libros
+    .filter((libros) => {
+      return libros.precio > 60000;
+    })
+    .map((titulo) => {
+      return {
+        titulo: titulo.titulo,
+        autor: titulo.autor,
+        Precio: titulo.precio
+      }
+    })
 
   // Mostrar el mensaje y capturar la elección del usuario
   let subChoice6 = prompt(subMessage);
@@ -789,8 +898,8 @@ function showSubMenu6() {
 
   switch (subChoice6) {
     case '1':
-      console.table(librosMayorMenor);
-      showSubMenu5();
+      console.table(LibroCaro1);
+      showSubMenu6();
       break;
     case '2':
       showMainMenu();
