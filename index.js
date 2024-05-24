@@ -11,7 +11,7 @@ let libros = [
         estado: 'nuevo',
         ubicacion: 'Armenia',
         fecha_publicacion: '05/06/1967',
-        editorial: 'DEBOLSILLO',
+        editorial: 'Editorial 2',
         paginas: 493,
         dimensiones: 'ancho: 13cm - alto: 19cm',
         peso:'50grs'
@@ -28,7 +28,7 @@ let libros = [
         estado: 'Nuevo',
         ubicacion: 'Armenia',
         fecha_publicacion: '25/01/2024',
-        editorial: 'RESERVOIR',
+        editorial: 'Editorial 2',
         paginas: 233,
         dimensiones: 'Ancho: 18cm - Alto: 24cm',
         peso:'50grs'
@@ -45,7 +45,7 @@ let libros = [
         estado: 'Nuevo',
         ubicacion: 'Armenia',
         fecha_publicacion: '22/01/2024',
-        editorial: 'ALMA',
+        editorial: 'Editorial 2',
         paginas: '141',
         dimensiones: 'Ancho: 19cm - Alto: 23cm',
         peso:'50grs'
@@ -62,7 +62,7 @@ let libros = [
         estado: 'Nuevo',
         ubicacion: 'Armenia',
         fecha_publicacion: '12/07/2023',
-        editorial: 'SIN FRONTERAS',
+        editorial: 'Editorial 2',
         paginas: '153',
         dimensiones: 'Ancho: 19cm - Alto: 23cm',
         peso:'50grs'
@@ -79,7 +79,7 @@ let libros = [
         estado: 'Nuevo',
         ubicacion: 'Armenia',
         fecha_publicacion: '11/03/2024',
-        editorial: 'EDICIONES B',
+        editorial: 'Editorial 2',
         paginas: '300',
         dimensiones: 'Ancho: 15cm - Alto: 23cm',
         peso:'50grs'
@@ -96,7 +96,7 @@ let libros = [
         estado: 'Nuevo',
         ubicacion: 'Armenia',
         fecha_publicacion: '12/04/2024',
-        editorial: 'SALAMANDRA',
+        editorial: 'Editorial 3',
         paginas: '437',
         dimensiones: 'Ancho: 19cm - Alto: 25cm',
         peso:'50grs'
@@ -113,7 +113,7 @@ let libros = [
         estado: 'Nuevo',
         ubicacion: 'Armenia',
         fecha_publicacion: '04/04/2024',
-        editorial: 'REY NARANJO EDITORES',
+        editorial: 'Editorial 3',
         paginas: '819',
         dimensiones: 'Ancho: 13cm - Alto: 20cm',
         peso:'50grs'
@@ -130,7 +130,7 @@ let libros = [
         estado: 'Nuevo',
         ubicacion: 'Armenia',
         fecha_publicacion: '02/22/2022',
-        editorial: 'ANAGRAMA',
+        editorial: 'Editorial 3',
         paginas: ' 173',
         dimensiones: 'Ancho: 14cm - Alto: 21cm',
         peso:'50grs'
@@ -147,7 +147,7 @@ let libros = [
         estado: 'Nuevo',
         ubicacion: 'Armenia',
         fecha_publicacion: '10/10/2023',
-        editorial: 'SOLAR',
+        editorial: 'Editorial 3',
         paginas: '627',
         dimensiones: 'Ancho: --cm - Alto: --cm',
         peso:'50grs'
@@ -164,7 +164,7 @@ let libros = [
         estado: 'Nuevo',
         ubicacion: 'Armenia',
         fecha_publicacion: '12/11/2023',
-        editorial: 'DEBOLSILLO',
+        editorial: 'Editorial 3',
         paginas: '651',
         dimensiones: 'Ancho: 12cm - Alto: 19cm',
         peso:'50grs'
@@ -181,7 +181,7 @@ let libros = [
         estado: 'Nuevo',
         ubicacion: 'Armenia',
         fecha_publicacion: '11/11/2023',
-        editorial: 'PAN HOUSE CASA EDITORIAL S.A.S',
+        editorial: 'Editorial 4',
         paginas: '282',
         dimensiones: 'Ancho: 15cm - Alto: 23cm',
         peso:'50grs'
@@ -198,7 +198,7 @@ let libros = [
         estado: 'Nuevo',
         ubicacion: 'Armenia',
         fecha_publicacion: '25/02/2024',
-        editorial: 'SALAMANDRA',
+        editorial: 'Editorial 4',
         paginas: '382',
         dimensiones: 'Ancho: 16cm - Alto: 24cm',
         peso:'50grs'
@@ -215,7 +215,7 @@ let libros = [
         estado: 'Nuevo',
         ubicacion: 'Armenia',
         fecha_publicacion: '28/03/2024',
-        editorial: 'ANAGRAMA',
+        editorial: 'Editorial 4',
         paginas: '378',
         dimensiones: 'Ancho: 14cm - Alto: 21cm',
         peso:'50grs'
@@ -232,7 +232,7 @@ let libros = [
         estado: 'Nuevo',
         ubicacion: 'Armenia',
         fecha_publicacion: '29/01/2024',
-        editorial: 'PLANETA',
+        editorial: 'Editorial 4',
         paginas: '351',
         dimensiones: 'Ancho: 15cm - Alto: 23cm',
         peso:'50grs'
@@ -249,7 +249,7 @@ let libros = [
         estado: 'Nuevo',
         ubicacion: 'Armenia',
         fecha_publicacion: '13/03/2023',
-        editorial: 'HARPER COLLINS',
+        editorial: 'Editorial 4',
         paginas: ' 285',
         dimensiones: 'Ancho: 15cm - Alto: 23cm',
         peso:'50grs'
@@ -266,7 +266,7 @@ let libros = [
         estado: "Nuevo",
         ubicacion: "Madrid, España",
         fecha_publicacion: "1605-01-16",
-        editorial: "Editorial X",
+        editorial: "Editorial 5",
         paginas: 1200,
         dimensiones: "15x5x20 cm",
         peso: "1.2 kg"
@@ -283,7 +283,7 @@ let libros = [
         estado: "Usado",
         ubicacion: "Londres, Reino Unido",
         fecha_publicacion: "1949-06-08",
-        editorial: "Editorial Y",
+        editorial: "Editorial 5",
         paginas: 328,
         dimensiones: "13x2x20 cm",
         peso: "0.5 kg"
@@ -300,7 +300,7 @@ let libros = [
         estado: "Nuevo",
         ubicacion: "Bogotá, Colombia",
         fecha_publicacion: "1967-06-05",
-        editorial: "Editorial Z",
+        editorial: "Editorial 5",
         paginas: 417,
         dimensiones: "14x4x21 cm",
         peso: "0.8 kg"
@@ -317,7 +317,7 @@ let libros = [
         estado: "Nuevo",
         ubicacion: "Nueva York, Estados Unidos",
         fecha_publicacion: "1960-07-11",
-        editorial: "Editorial Harper",
+        editorial: "Editorial 5",
         paginas: 324,
         dimensiones: "14x2x21 cm",
         peso: "0.6 kg"
@@ -334,7 +334,7 @@ let libros = [
         estado: "Nuevo",
         ubicacion: "Londres, Reino Unido",
         fecha_publicacion: "1954-07-29",
-        editorial: "Editorial HarperCollins",
+        editorial: "Editorial 5",
         paginas: 1178,
         dimensiones: "16x6x24 cm",
         peso: "2.0 kg"
@@ -356,12 +356,14 @@ const libroNuevo = {
     estado: "Nuevo",
     ubicacion: "Cali",
     fecha_publicacion: "29/04/2024",
-    editorial: "ALTEA",
+    editorial: "LIBRO NUEVO",
     paginas: 188,
     dimensiones: "Ancho: 15cm - Alto: 23cm",
     peso: "50grs"
   };
+ 
   
+
 //Funcion para mostrar el menu de eleccion
 
   function mostrarMenu() {
@@ -372,10 +374,12 @@ const libroNuevo = {
   console.log("4. Mostrar la longitud de la pila");
   console.log("5. Salir");
   }
+
+
   
   //Funciones , Mostrar , añadir , quitar
   function mostrarLibros(libros) {
-  console.table(libros);
+  console.log(libros);
   }
   
   function añadirLibro(libros, libro) {
@@ -395,12 +399,31 @@ const libroNuevo = {
   function mostrarLongitud(libros) {
   console.log(`Longitud del array: ${libros.length}`);
   }
+/*
+  //MOSTRAR LISTA
+
+  const LibroMethod = libros.map((libros) => {
+    return{
+        titulo: libros.titulo,
+        autor: libros.autor,
+        editorial: libros.editorial,
+        precio: libros.precio
+    }
+  });
+
+  //MOSTRAR 10 ITERACIONES
+
+  const iteraciones = libros.map((libros) =>{
+    return{
+        titulo: libros.titulo
+    }
+  });*/
 
   //Switch case de eleccion para menu 
   
   let continuar = "si";
   
-  do {
+  do{
   mostrarMenu();
   var opcion = prompt("Seleccione una opción:");
   switch (opcion) {
