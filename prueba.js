@@ -371,7 +371,10 @@ function showMainMenu() {
   message += "1. Menu Libros\n";
   message += "2. Menu iteraciones\n";
   message += "3. Menu spreed \n";
-  message += "4. Salir";
+  message += "4. Menu Filter \n";
+  message += "5. Menu Sort \n";
+  message += "6. Menu Encadenados \n";
+  message += "7. Salir";
 
   // Mensaje y Opcion del Usuario
   let choice = prompt(message);
@@ -389,7 +392,10 @@ function showMainMenu() {
     case '3':
       showSubMenu3(); // Volver al menú principal
       break;
-    case '4':
+      case '4':
+        showSubMenu4(); // Volver al menú principal
+        break;
+    case '7':
       alert("Saliendo del menú...");
       break;
     default:
@@ -666,6 +672,59 @@ function showSubMenu3() {
       showSubMenu();
   }
 }
+
+function showSubMenu4() {
+  // Definir el mensaje con las opciones del submenú
+
+  let subMessage = "Elige una  opcion :\n";
+  subMessage += "1. Libros con un precio mayor a $50,000\n";
+  subMessage += "2. Resumen de libros Mayor numero de paginas\n";
+  subMessage += "3. Regresar al menú principal";
+
+  
+  //METHODS FILTER
+
+  const LibroCaro = libros.filter((libros) =>{
+    return libros.precio > 50000
+  })
+
+  const paginasLibro = libros
+  .filter((libros) =>{
+    return libros.paginas > 400;
+  })
+  .map((titulo) =>{
+    return{
+      titulo: titulo.titulo,
+      autor: titulo.autor,
+      editorial: titulo.editorial,
+      Paginas: titulo.paginas
+    }
+  })
+
+
+  // Mostrar el mensaje y capturar la elección del usuario
+  let subChoice4 = prompt(subMessage);
+
+  // Evaluar la elección del usuario en el submenú
+
+  switch (subChoice4) {
+    case '1':
+      console.table(LibroCaro);
+      showSubMenu4();
+      break;
+    case '2':
+      console.table(paginasLibro);
+        showSubMenu4();
+      break;
+    case '3':
+      showMainMenu(); 
+      break;
+    default:
+      alert("Opción no válida");
+      showSubMenu();
+  }
+}
+
 
 
 
