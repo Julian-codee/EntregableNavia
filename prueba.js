@@ -774,105 +774,7 @@ function showSubMenu6() {
   // Definir el mensaje con las opciones del submenú
 
   let subMessage = "Elige una  opcion :\n";
-  subMessage += "1. Libros Caros 1\n";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
+  subMessage += "1. Libros Caros 1\n";  
   subMessage += "2. Regresar al menú principal";
 
 
@@ -909,9 +811,6 @@ function showSubMenu6() {
       showSubMenu();
   }
 }
-
-
-
 
 // Inicialmente mostrar el menú principal
 showMainMenu();
