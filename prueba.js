@@ -12,7 +12,7 @@ let libros = [
     ubicacion: 'Armenia',
     fecha_publicacion: '05/06/1967',
     editorial: 'Editorial 2',
-    paginas: 493,
+    paginas: 93,
     dimensiones: 'ancho: 13cm - alto: 19cm',
     peso: '50grs'
   },
@@ -29,7 +29,7 @@ let libros = [
     ubicacion: 'Armenia',
     fecha_publicacion: '25/01/2024',
     editorial: 'Editorial 2',
-    paginas: 233,
+    paginas: 85,
     dimensiones: 'Ancho: 18cm - Alto: 24cm',
     peso: '50grs'
   },
@@ -46,7 +46,7 @@ let libros = [
     ubicacion: 'Armenia',
     fecha_publicacion: '22/01/2024',
     editorial: 'Editorial 2',
-    paginas: '141',
+    paginas: 99,
     dimensiones: 'Ancho: 19cm - Alto: 23cm',
     peso: '50grs'
   },
@@ -63,7 +63,7 @@ let libros = [
     ubicacion: 'Armenia',
     fecha_publicacion: '12/07/2023',
     editorial: 'Editorial 2',
-    paginas: '153',
+    paginas: 153,
     dimensiones: 'Ancho: 19cm - Alto: 23cm',
     peso: '50grs'
   },
@@ -80,7 +80,7 @@ let libros = [
     ubicacion: 'Armenia',
     fecha_publicacion: '11/03/2024',
     editorial: 'Editorial 2',
-    paginas: '300',
+    paginas: 300,
     dimensiones: 'Ancho: 15cm - Alto: 23cm',
     peso: '50grs'
   },
@@ -97,7 +97,7 @@ let libros = [
     ubicacion: 'Armenia',
     fecha_publicacion: '12/04/2024',
     editorial: 'Editorial 3',
-    paginas: '437',
+    paginas: 437,
     dimensiones: 'Ancho: 19cm - Alto: 25cm',
     peso: '50grs'
   },
@@ -114,7 +114,7 @@ let libros = [
     ubicacion: 'Armenia',
     fecha_publicacion: '04/04/2024',
     editorial: 'Editorial 3',
-    paginas: '819',
+    paginas: 819,
     dimensiones: 'Ancho: 13cm - Alto: 20cm',
     peso: '50grs'
   },
@@ -131,7 +131,7 @@ let libros = [
     ubicacion: 'Armenia',
     fecha_publicacion: '02/22/2022',
     editorial: 'Editorial 3',
-    paginas: ' 173',
+    paginas:  50,
     dimensiones: 'Ancho: 14cm - Alto: 21cm',
     peso: '50grs'
   },
@@ -148,7 +148,7 @@ let libros = [
     ubicacion: 'Armenia',
     fecha_publicacion: '10/10/2023',
     editorial: 'Editorial 3',
-    paginas: '627',
+    paginas: 627,
     dimensiones: 'Ancho: --cm - Alto: --cm',
     peso: '50grs'
   },
@@ -165,7 +165,7 @@ let libros = [
     ubicacion: 'Armenia',
     fecha_publicacion: '12/11/2023',
     editorial: 'Editorial 3',
-    paginas: '651',
+    paginas: 651,
     dimensiones: 'Ancho: 12cm - Alto: 19cm',
     peso: '50grs'
   },
@@ -182,7 +182,7 @@ let libros = [
     ubicacion: 'Armenia',
     fecha_publicacion: '11/11/2023',
     editorial: 'Editorial 4',
-    paginas: '282',
+    paginas: 282,
     dimensiones: 'Ancho: 15cm - Alto: 23cm',
     peso: '50grs'
   },
@@ -199,7 +199,7 @@ let libros = [
     ubicacion: 'Armenia',
     fecha_publicacion: '25/02/2024',
     editorial: 'Editorial 4',
-    paginas: '382',
+    paginas: 382,
     dimensiones: 'Ancho: 16cm - Alto: 24cm',
     peso: '50grs'
   },
@@ -216,7 +216,7 @@ let libros = [
     ubicacion: 'Armenia',
     fecha_publicacion: '28/03/2024',
     editorial: 'Editorial 4',
-    paginas: '378',
+    paginas: 378,
     dimensiones: 'Ancho: 14cm - Alto: 21cm',
     peso: '50grs'
   },
@@ -233,7 +233,7 @@ let libros = [
     ubicacion: 'Armenia',
     fecha_publicacion: '29/01/2024',
     editorial: 'Editorial 4',
-    paginas: '351',
+    paginas: 351,
     dimensiones: 'Ancho: 15cm - Alto: 23cm',
     peso: '50grs'
   },
@@ -250,7 +250,7 @@ let libros = [
     ubicacion: 'Armenia',
     fecha_publicacion: '13/03/2023',
     editorial: 'Editorial 4',
-    paginas: ' 285',
+    paginas:  285,
     dimensiones: 'Ancho: 15cm - Alto: 23cm',
     peso: '50grs'
   },
@@ -379,10 +379,10 @@ function showMainMenu() {
   // Mensaje y Opcion del Usuario
   let choice = prompt(message);
 
-  //Elección del usuario
+
   switch (choice) {
     case '1':
-      //SUBMENU1
+  
       showSubMenu();
       break;
     case '2':
@@ -390,13 +390,16 @@ function showMainMenu() {
       showSubMenu2();
       break;
     case '3':
-      showSubMenu3(); // Volver al menú principal
+      showSubMenu3(); 
       break;
     case '4':
-      showSubMenu4(); // Volver al menú principal
+      showSubMenu4(); 
       break;
     case '5':
-      showSubMenu5(); // Volver al menú principal
+      showSubMenu5(); 
+      break;
+    case '6':
+      showSubMenu6(); 
       break;
     case '7':
       alert("Saliendo del menú...");
@@ -417,15 +420,16 @@ function showSubMenu() {
   subMessage += "4. Mostrar la longitud de la pila\n";
   subMessage += "5. Regresar al menú principal";
 
+ //FUNCION MOSTRAR 
   function mostrarLibros(libros) {
     console.table(libros);
   }
-
+ //FUNCION AÑADIR
   function añadirLibro(libros, libro) {
     libros.push(libro);
     console.log(`Libro añadido: ${libro.titulo}`);
   }
-
+ //FUNCION QUITAR
   function quitarLibro(libros) {
     const libroQuitado = libros.pop();
     if (libroQuitado) {
@@ -434,7 +438,7 @@ function showSubMenu() {
       console.log("No hay libros para quitar.");
     }
   }
-
+ //FUNCION LONGITUD
   function mostrarLongitud(libros) {
     console.log(`Longitud del array: ${libros.length}`);
   }
@@ -442,7 +446,7 @@ function showSubMenu() {
   // Mostrar el mensaje y capturar la elección del usuario
   let subChoice = prompt(subMessage);
 
-  // Evaluar la elección del usuario en el submenú
+
 
   switch (subChoice) {
     case '1':
@@ -462,18 +466,18 @@ function showSubMenu() {
       showSubMenu();
       break;
     case '5':
-      showMainMenu(); // Volver al menú principal
+      showMainMenu(); 
       break;
     default:
       alert("Opción no válida");
-      showSubMenu(); // Volver al submenú en caso de opción no válida
+      showSubMenu(); 
   }
 }
 
 //SUBMENU2
 
 function showSubMenu2() {
-  // Definir el mensaje con las opciones del submenú
+
 
   let subMessage = "Elige una  opcion :\n";
   subMessage += "1. Mostrar 1 iteracion\n";
@@ -569,8 +573,8 @@ function showSubMenu2() {
   const iteraciones9 = libros.map((libros) => {
     return {
       titulo: libros.titulo,
-      Idioma: libros.Idioma,
-      Isbn: libros.Isbn
+      Idioma: libros.idioma,
+      Isbn: libros.isbn
 
     }
   });
@@ -578,16 +582,13 @@ function showSubMenu2() {
   const iteraciones10 = libros.map((libros) => {
     return {
       titulo: libros.titulo,
-      Editorial: libros.Editorial,
+      Editorial: libros.editorial,
       Autor: libros.autor
 
     }
   });
 
-  // Mostrar el mensaje y capturar la elección del usuario
   let subChoice2 = prompt(subMessage);
-
-  // Evaluar la elección del usuario en el submenú
 
   switch (subChoice2) {
     case '1':
@@ -607,11 +608,11 @@ function showSubMenu2() {
       console.table(iteraciones10);
       showSubMenu2();
     case '3':
-      showMainMenu(); // Volver al menú principal
+      showMainMenu(); 
       break;
     default:
       alert("Opción no válida");
-      showSubMenu(); // Volver al submenú en caso de opción no válida
+      showSubMenu(); 
   }
 }
 
@@ -619,7 +620,7 @@ function showSubMenu2() {
 //SUBMENU 3
 
 function showSubMenu3() {
-  // Definir el mensaje con las opciones del submenú
+
 
   let subMessage = "Elige una  opcion :\n";
   subMessage += "1. Agregar descuento a todos los libros\n";
@@ -653,10 +654,10 @@ function showSubMenu3() {
 
 
 
-  // Mostrar el mensaje y capturar la elección del usuario
+  
   let subChoice3 = prompt(subMessage);
 
-  // Evaluar la elección del usuario en el submenú
+  
 
   switch (subChoice3) {
     case '1':
@@ -676,8 +677,9 @@ function showSubMenu3() {
   }
 }
 
+//FUNCION SUBMENU4
 function showSubMenu4() {
-  // Definir el mensaje con las opciones del submenú
+
 
   let subMessage = "Elige una  opcion :\n";
   subMessage += "1. Libros con un precio mayor a $50,000\n";
@@ -705,10 +707,9 @@ function showSubMenu4() {
     })
 
 
-  // Mostrar el mensaje y capturar la elección del usuario
+
   let subChoice4 = prompt(subMessage);
 
-  // Evaluar la elección del usuario en el submenú
 
   switch (subChoice4) {
     case '1':
@@ -728,10 +729,10 @@ function showSubMenu4() {
   }
 }
 
-//FUNCIONALIDADES SORT
+//FUNCION SUBMENU5
 
 function showSubMenu5() {
-  // Definir el mensaje con las opciones del submenú
+
 
   let subMessage = "Elige una  opcion :\n";
   subMessage += "1. Resumen de libros Mayor numero de paginas\n";
@@ -740,18 +741,18 @@ function showSubMenu5() {
 
   //METHODS SORT
 
-  const librosMayorMenor = libros.sort((a,b) => b.paginas - a.paginas)
-  .map((titulo) => {
-    return {
-      titulo: titulo.titulo,
-      Paginas: titulo.paginas
-    }
-  })
+  const librosMayorMenor = libros.sort((a, b) => b.paginas - a.paginas)
+    .map((titulo) => {
+      return {
+        titulo: titulo.titulo,
+        Paginas: titulo.paginas
+      }
+    })
 
-  // Mostrar el mensaje y capturar la elección del usuario
+  
   let subChoice5 = prompt(subMessage);
 
-  // Evaluar la elección del usuario en el submenú
+
 
   switch (subChoice5) {
     case '1':
@@ -768,48 +769,67 @@ function showSubMenu5() {
 }
 
 
-//METHODS ENCADENADOS
+//FUNCION SUBMENU4
 
 function showSubMenu6() {
-  // Definir el mensaje con las opciones del submenú
+  let subMessage = "Elige una opción:\n";
+  subMessage += "1. Mostrar libros precio mayor a 60000 pesos\n";
+  subMessage += "2. Mostrar libros menos de 100 paginas\n";
+  subMessage += "3. Mostrar libros precio mayor a 70000 pesos\n";
+  subMessage += "4. Mostrar libros mayor numero de paginas\n";
+  subMessage += "5. Regresar al menú \n";
 
-  let subMessage = "Elige una  opcion :\n";
-  subMessage += "1. Libros Caros 1\n";  
-  subMessage += "2. Regresar al menú principal";
 
-
-  //METHODS ENCADENADOS
-
- 
-  const LibroCaro1 = libros
-    .filter((libros) => {
-      return libros.precio > 60000;
-    })
-    .map((titulo) => {
-      return {
-        titulo: titulo.titulo,
-        autor: titulo.autor,
-        Precio: titulo.precio
-      }
-    })
-
-  // Mostrar el mensaje y capturar la elección del usuario
-  let subChoice6 = prompt(subMessage);
-
-  // Evaluar la elección del usuario en el submenú
-
-  switch (subChoice6) {
-    case '1':
-      console.table(LibroCaro1);
-      showSubMenu6();
-      break;
-    case '2':
-      showMainMenu();
-      break;
-    default:
-      alert("Opción no válida");
-      showSubMenu();
+  function librosCaros() {
+      return libros.filter(libro => libro.precio > 60000)
+          .map(libro => ({ titulo: libro.titulo, autor: libro.autor, precio: libro.precio }));
   }
+
+  function librosMenosDe100Paginas() {
+      return libros.filter(libro => libro.paginas < 100)
+          .map(libro => ({ titulo: libro.titulo, autor: libro.autor, editorial: libro.editorial, paginas: libro.paginas }));
+  }
+
+  function librosCarosOrdenados() {
+      return libros.filter(libro => libro.precio > 70000)
+          .sort((a, b) => b.precio - a.precio)
+          .map(libro => ({ titulo: libro.titulo, autor: libro.autor, precio: libro.precio }));
+  }
+
+  function librosMayorMenorPaginas() {
+      return libros.filter(libro => libro.paginas > 0)
+          .sort((a, b) => b.paginas - a.paginas)
+          .map(libro => ({ titulo: libro.titulo, autor: libro.autor, editorial: libro.editorial, paginas: libro.paginas }));
+  }
+let subChoice = prompt(subMessage);
+
+  switch (subChoice) {
+      case '1':
+          console.table(librosCaros());
+          showSubMenu6();
+          break;
+      case '2':
+          console.table(librosMenosDe100Paginas());
+          showSubMenu6();
+          break;
+      case '3':
+          console.table(librosCarosOrdenados());
+          showSubMenu6();
+          break;
+      case '4':
+          console.table(librosMayorMenorPaginas());
+          showSubMenu6();
+          break;
+      case '5':
+          showMainMenu();
+          break;
+      default:
+          alert("Opción no válida");
+          showSubMenu4();
+  }
+
+
+
 }
 
 // Inicialmente mostrar el menú principal
