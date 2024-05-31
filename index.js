@@ -131,7 +131,7 @@ let libros = [
     ubicacion: 'Armenia',
     fecha_publicacion: '02/22/2022',
     editorial: 'Editorial 3',
-    paginas:  50,
+    paginas: 50,
     dimensiones: 'Ancho: 14cm - Alto: 21cm',
     peso: '50grs'
   },
@@ -250,7 +250,7 @@ let libros = [
     ubicacion: 'Armenia',
     fecha_publicacion: '13/03/2023',
     editorial: 'Editorial 4',
-    paginas:  285,
+    paginas: 285,
     dimensiones: 'Ancho: 15cm - Alto: 23cm',
     peso: '50grs'
   },
@@ -374,7 +374,8 @@ function showMainMenu() {
   message += "4. Menu Filter \n";
   message += "5. Menu Sort \n";
   message += "6. Menu Encadenados \n";
-  message += "7. Salir";
+  message += "7. Menu Find \n";
+  message += "8. Salir";
 
   // Mensaje y Opcion del Usuario
   let choice = prompt(message);
@@ -382,7 +383,7 @@ function showMainMenu() {
 
   switch (choice) {
     case '1':
-  
+
       showSubMenu();
       break;
     case '2':
@@ -390,18 +391,21 @@ function showMainMenu() {
       showSubMenu2();
       break;
     case '3':
-      showSubMenu3(); 
+      showSubMenu3();
       break;
     case '4':
-      showSubMenu4(); 
+      showSubMenu4();
       break;
     case '5':
-      showSubMenu5(); 
+      showSubMenu5();
       break;
     case '6':
-      showSubMenu6(); 
+      showSubMenu6();
       break;
     case '7':
+      showSubMenu7();
+      break;
+    case '8':
       alert("Saliendo del menú...");
       break;
     default:
@@ -420,16 +424,16 @@ function showSubMenu() {
   subMessage += "4. Mostrar la longitud de la pila\n";
   subMessage += "5. Regresar al menú principal";
 
- //FUNCION MOSTRAR 
+  //FUNCION MOSTRAR 
   function mostrarLibros(libros) {
     console.table(libros);
   }
- //FUNCION AÑADIR
+  //FUNCION AÑADIR
   function añadirLibro(libros, libro) {
     libros.push(libro);
     console.log(`Libro añadido: ${libro.titulo}`);
   }
- //FUNCION QUITAR
+  //FUNCION QUITAR
   function quitarLibro(libros) {
     const libroQuitado = libros.pop();
     if (libroQuitado) {
@@ -438,7 +442,7 @@ function showSubMenu() {
       console.log("No hay libros para quitar.");
     }
   }
- //FUNCION LONGITUD
+  //FUNCION LONGITUD
   function mostrarLongitud(libros) {
     console.log(`Longitud del array: ${libros.length}`);
   }
@@ -466,11 +470,11 @@ function showSubMenu() {
       showSubMenu();
       break;
     case '5':
-      showMainMenu(); 
+      showMainMenu();
       break;
     default:
       alert("Opción no válida");
-      showSubMenu(); 
+      showSubMenu();
   }
 }
 
@@ -608,11 +612,11 @@ function showSubMenu2() {
       console.table(iteraciones10);
       showSubMenu2();
     case '3':
-      showMainMenu(); 
+      showMainMenu();
       break;
     default:
       alert("Opción no válida");
-      showSubMenu(); 
+      showSubMenu();
   }
 }
 
@@ -653,11 +657,9 @@ function showSubMenu3() {
     });
 
 
-
-  
   let subChoice3 = prompt(subMessage);
 
-  
+
 
   switch (subChoice3) {
     case '1':
@@ -749,7 +751,7 @@ function showSubMenu5() {
       }
     })
 
-  
+
   let subChoice5 = prompt(subMessage);
 
 
@@ -769,7 +771,7 @@ function showSubMenu5() {
 }
 
 
-//FUNCION SUBMENU4
+//FUNCION SUBMENU6
 
 function showSubMenu6() {
   let subMessage = "Elige una opción:\n";
@@ -781,56 +783,189 @@ function showSubMenu6() {
 
 
   function librosCaros() {
-      return libros.filter(libro => libro.precio > 60000)
-          .map(libro => ({ titulo: libro.titulo, autor: libro.autor, precio: libro.precio }));
+    return libros.filter(libro => libro.precio > 60000)
+      .map(libro => ({ titulo: libro.titulo, autor: libro.autor, precio: libro.precio }));
   }
 
   function librosMenosDe100Paginas() {
-      return libros.filter(libro => libro.paginas < 100)
-          .map(libro => ({ titulo: libro.titulo, autor: libro.autor, editorial: libro.editorial, paginas: libro.paginas }));
+    return libros.filter(libro => libro.paginas < 100)
+      .map(libro => ({ titulo: libro.titulo, autor: libro.autor, editorial: libro.editorial, paginas: libro.paginas }));
   }
 
   function librosCarosOrdenados() {
-      return libros.filter(libro => libro.precio > 70000)
-          .sort((a, b) => b.precio - a.precio)
-          .map(libro => ({ titulo: libro.titulo, autor: libro.autor, precio: libro.precio }));
+    return libros.filter(libro => libro.precio > 70000)
+      .sort((a, b) => b.precio - a.precio)
+      .map(libro => ({ titulo: libro.titulo, autor: libro.autor, precio: libro.precio }));
   }
 
   function librosMayorMenorPaginas() {
-      return libros.filter(libro => libro.paginas > 0)
-          .sort((a, b) => b.paginas - a.paginas)
-          .map(libro => ({ titulo: libro.titulo, autor: libro.autor, editorial: libro.editorial, paginas: libro.paginas }));
+    return libros.filter(libro => libro.paginas > 0)
+      .sort((a, b) => b.paginas - a.paginas)
+      .map(libro => ({ titulo: libro.titulo, autor: libro.autor, editorial: libro.editorial, paginas: libro.paginas }));
   }
-let subChoice = prompt(subMessage);
+  let subChoice = prompt(subMessage);
 
   switch (subChoice) {
-      case '1':
-          console.table(librosCaros());
-          showSubMenu6();
-          break;
-      case '2':
-          console.table(librosMenosDe100Paginas());
-          showSubMenu6();
-          break;
-      case '3':
-          console.table(librosCarosOrdenados());
-          showSubMenu6();
-          break;
-      case '4':
-          console.table(librosMayorMenorPaginas());
-          showSubMenu6();
-          break;
-      case '5':
-          showMainMenu();
-          break;
-      default:
-          alert("Opción no válida");
-          showSubMenu4();
+    case '1':
+      console.table(librosCaros());
+      showSubMenu6();
+      break;
+    case '2':
+      console.table(librosMenosDe100Paginas());
+      showSubMenu6();
+      break;
+    case '3':
+      console.table(librosCarosOrdenados());
+      showSubMenu6();
+      break;
+    case '4':
+      console.table(librosMayorMenorPaginas());
+      showSubMenu6();
+      break;
+    case '5':
+      showMainMenu();
+      break;
+    default:
+      alert("Opción no válida");
+      showSubMenu4();
   }
 
 
 
 }
+//SUBMENU7
+function showSubMenu7() {
+  let subMessage = "Elige una opción:\n";
+  subMessage += "1. Buscar Libro por Titulo\n";
+  subMessage += "2. Buscar Libro por Autor\n";
+  subMessage += "3. Buscar Libro por Fecha_Publicacion\n";
+  subMessage += "4. Buscar Libro por Genero\n";
+  subMessage += "5. Buscar Libro por Idioma\n";
+  subMessage += "6. 10 Iteraciones diferentes\n";
+  subMessage += "7. Regresar al menú \n";
+
+//Buscar un objeto por titulo
+
+  function tituloLibro(){
+    return libros.find(libros => libros.titulo === 'ANATOMIA DEL MAL');
+  }
+
+  //Buscar un objeto por autor
+
+  function tituloAutor(){
+    return libros.find(libros => libros.autor === 'Joaquin Arias');
+  }
+
+  //Buscar un objeto por fecha
+
+  function tituloFecha(){
+    return libros.find(libros => libros.fecha_publicacion === '1954-07-29');
+  }
+
+  //Buscar un objeto por genero
+
+  function tituloGenero(){
+    return libros.find(libros => libros.genero === 'Ficción');
+  }
+
+  //Buscar un objeto por idioma
+
+  function tituloIdioma(){
+    return libros.find(libros => libros.idioma === 'Inglés');
+  }
+
+  //10 iteraciones FIND
+
+  let iteracion = libros.find((libros) => {
+    return libros.titulo === "Harper Lee";
+  });
+
+  let iteracion2 = libros.find((libros) => {
+    return libros.paginas === "328";
+  });
+
+  let iteracion3 = libros.find((libros) => {
+    return libros.dimensiones === "14x4x21 cm";
+  });
+
+  let iteracion4 = libros.find((libros) => {
+    return libros.peso === "1.2 kg";
+  });
+
+  let iteracion5 = libros.find((libros) => {
+    return libros.ubicacion === "Londres, Reino Unido";
+  });
+
+  let iteracion6 = libros.find((libros) => {
+    return libros.estado === "Usado";
+  });
+
+  let iteracion7 = libros.find((libros) => {
+    return libros.formato === "Tapa blanda";
+  });
+
+  let iteracion8 = libros.find((libros) => {
+    return libros.isbn === "9789876543210";
+  });
+
+  let iteracion9 = libros.find((libros) => {
+    return libros.editorial === "Editorial 5";
+  });
+
+  let iteracion10 = libros.find((libros) => {
+    return libros.precio === 85000;
+  });
+
+
+  let subChoice = prompt(subMessage);
+
+  switch (subChoice) {
+    case '1':
+      console.table(tituloLibro());
+      showSubMenu7();
+      break;
+    case '2':
+      console.table(tituloAutor());
+      showSubMenu7();
+      break;
+    case '3':
+      console.table(tituloFecha());
+      showSubMenu7();
+      break;
+    case '4':
+      console.table(tituloGenero());
+      showSubMenu7();
+      break;
+    case '5':
+      console.table(tituloIdioma());
+      showSubMenu7();
+      break;
+    case '6':
+      console.table(iteracion);
+      console.table(iteracion2);
+      console.table(iteracion3);
+      console.table(iteracion4);
+      console.table(iteracion5);
+      console.table(iteracion6);
+      console.table(iteracion7);
+      console.table(iteracion8);
+      console.table(iteracion9);
+      console.table(iteracion10);
+      showSubMenu7();
+      break;
+    case '7':
+      showMainMenu();
+      break;
+    default:
+      alert("Opción no válida");
+      showSubMenu4();
+  }
+
+
+
+}
+
+
 
 // Inicialmente mostrar el menú principal
 showMainMenu();
